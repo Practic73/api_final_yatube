@@ -85,6 +85,10 @@ class Comment(models.Model):
         db_index=True,
     )
 
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+
 
 class Follow(models.Model):
     user = models.ForeignKey(
@@ -99,3 +103,7 @@ class Follow(models.Model):
         verbose_name='Подписки',
         related_name='follow',
     )
+
+    class Meta:
+        verbose_name = 'Подписка'
+        verbose_name_plural = 'Подписки'
