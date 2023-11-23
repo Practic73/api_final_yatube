@@ -65,13 +65,37 @@ class Post(models.Model):
 
 class Comment(models.Model):
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='comments')
+        User,
+        on_delete=models.CASCADE,
+        related_name='comments',
+        verbose_name='Автор',
+    )
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name='comments')
-    text = models.TextField()
+        Post,
+        on_delete=models.CASCADE,
+        related_name='comments',
+        verbose_name='Пост',
+    )
+    text = models.TextField(
+        verbose_name='Текст',
+    )
     created = models.DateTimeField(
-        'Дата добавления', auto_now_add=True, db_index=True)
+        'Дата добавления',
+        auto_now_add=True,
+        db_index=True,
+    )
 
 
 class Follow(models.Model):
-    ...
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        verbose_name='Пользователь',
+        related_name='follow_user'
+    )
+    following = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        verbose_name='Подписки',
+        related_name='follow',
+    )
