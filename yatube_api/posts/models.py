@@ -101,9 +101,12 @@ class Follow(models.Model):
         User,
         on_delete=models.CASCADE,
         verbose_name='Подписки',
-        related_name='follow',
+        related_name='follow_follower',
     )
 
     class Meta:
         verbose_name = 'Подписка'
         verbose_name_plural = 'Подписки'
+
+    def __str__(self):
+        return f'{self.user} {self.following}'
