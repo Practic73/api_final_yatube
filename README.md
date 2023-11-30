@@ -62,6 +62,24 @@ py manage.py migrate
 py manage.py runserver
 ```
 
+## Основные использованные технологии:
+- Python 3.10.5 ([документация](https://www.python.org/))  
+
+***Веб разработка:***
+- Django ver. 3.2.16 ([документация](https://www.djangoproject.com/download/))  
+
+***REST API:***
+- Django REST framework ver. 3.12.4 ([документация](https://www.django-rest-framework.org/))  
+
+***Основные библиотеки:***  
+- pytest ver. 6.2.4 ([документация](https://docs.pytest.org/en/latest/contents.html))
+- django-filter ([документация](https://www.django-rest-framework.org/api-guide/filtering/#setting-filter-backends))
+- djoser ([документация](https://djoser.readthedocs.io/en/latest/getting_started.html))
+- Simple JWT ([документация](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/))
+
+## Авторы:
+**Ашанин Борис**  
+Ссылка на гитхаб - https://github.com/Practic73
 ## Примеры запросов к API:
 
 *```GET   .../api/v1/posts/```*
